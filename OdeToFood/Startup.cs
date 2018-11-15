@@ -36,7 +36,7 @@ namespace OdeToFood
             app.Run(async (context) =>
             {
                 context.Response.ContentType = "text/plain";
-                await context.Response.WriteAsync($"Not found");
+                await context.Response.WriteAsync($"Not found : {env.EnvironmentName}");
             });
         }
 
