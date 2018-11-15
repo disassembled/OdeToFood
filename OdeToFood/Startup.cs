@@ -29,7 +29,7 @@ namespace OdeToFood
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(greeter.GetMessageOfTheDay());
+                await context.Response.WriteAsync($"{greeter.GetMessageOfTheDay()} : {env.EnvironmentName}");
             });
         }
     }
