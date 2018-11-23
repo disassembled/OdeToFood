@@ -4,7 +4,17 @@
 <h1>Create</h1>
 
 <form method="post">
-    <input asp-for="Name" />
-    <select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select>
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><input asp-for="Name" /></td>
+            <td><span asp-validation-for="Name"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Cuisine"></label></td>
+            <td><select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select></td>
+            <td><span asp-validation-for="Cuisine"></span></td>
+        </tr>
+    </table>
     <input type="submit" name="save" value="Save" />
 </form>
